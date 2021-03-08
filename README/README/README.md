@@ -2,14 +2,14 @@
 
 The files in this repository were used to configure the network depicted below.
 
-Images/ELK_Network_Diagram.png)
+Images/ELK_Network_Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the file may be used to install only certain pieces of it, such as Filebeat.
 
   - filebeat-playbook.yml
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -30,13 +30,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat takes the metrics and statistics and collects them into the specified location, in this case, Elasticsearch and Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
-
-
-
-
-
-
 
 -------------------------------------------------------
 | Name     | Function | IP Address | Operating System |
@@ -84,13 +77,14 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+Images/DockerPS.png
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - 10.0.0.6
 - 10.0.0.7
 - 10.0.0.8
+
 
 We have installed the following Beats on these machines:
 - Filebeat
@@ -104,4 +98,4 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the configuration file to the web servers.
 - Update the configuration file to include the IP of your ELK VM
-- Run the playbook, and navigate to http://[yourip]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to http://[ELK_Public_IP]:5601/app/kibana to check that the installation worked as expected.
